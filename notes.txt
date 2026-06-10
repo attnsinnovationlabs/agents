@@ -1,0 +1,302 @@
+Learning Agentic AI is valuable because it enables you to build systems that don't just answer questions—they can **plan, reason, use tools, make decisions, and complete tasks autonomously**.
+
+## What is Agentic AI?
+
+Traditional AI:
+
+```text
+User → AI → Response
+```
+
+Agentic AI:
+
+```text
+User
+  |
+  v
+AI Agent
+  |
+  +--> Think
+  +--> Plan
+  +--> Use Tools
+  +--> Execute Tasks
+  +--> Verify Results
+  |
+  v
+Final Outcome
+```
+
+Instead of only generating text, an AI agent can perform actions to achieve a goal.
+
+---
+
+## Why Learn Agentic AI?
+
+### 1. High Demand in Industry
+
+Many companies are investing in AI agents for:
+
+* Customer support automation
+* Business process automation
+* Software development
+* Data analysis
+* Operations management
+* Finance and healthcare workflows
+
+Skills in Agentic AI are increasingly sought after.
+
+---
+
+### 2. Build Real Business Applications
+
+Examples:
+
+* AI Site Management System
+* AI Society Management App
+* AI Hotel Management System
+* AI EV Charging Management Platform
+* AI Procurement System
+* AI HR and Recruitment Assistant
+
+These align closely with the types of applications you've been exploring.
+
+---
+
+### 3. Increase Productivity
+
+An AI agent can:
+
+* Read emails
+* Generate reports
+* Schedule tasks
+* Analyze data
+* Create tickets
+* Update databases
+* Send notifications
+
+This can reduce manual effort significantly.
+
+---
+
+## Technologies You Will Learn
+
+### OpenAI Agents SDK
+
+Official framework from [OpenAI](https://openai.com/?utm_source=chatgpt.com) for building AI agents.
+
+Features:
+
+* Agents
+* Tools
+* Handoffs
+* Memory
+* Multi-agent systems
+
+---
+
+### CrewAI
+
+[CrewAI](https://www.crewai.com/?utm_source=chatgpt.com) allows multiple specialized agents to work together.
+
+Example:
+
+```text
+Manager Agent
+      |
+-------------------
+|        |        |
+Developer QA  Tester
+Agent     Agent
+```
+
+---
+
+### LangGraph
+
+[LangGraph](https://www.langchain.com/langgraph?utm_source=chatgpt.com) is useful for building complex workflows and stateful agent systems.
+
+Example:
+
+```text
+Start
+  |
+Research Agent
+  |
+Decision Agent
+  |
+Execution Agent
+  |
+End
+```
+
+---
+
+### LangChain
+
+[LangChain](https://www.langchain.com/?utm_source=chatgpt.com) helps connect LLMs to:
+
+* Databases
+* APIs
+* Documents
+* Vector databases
+* Tools
+
+---
+
+### AutoGen
+
+[AutoGen](https://microsoft.github.io/autogen/?utm_source=chatgpt.com) from [Microsoft](https://www.microsoft.com/?utm_source=chatgpt.com) supports conversations among multiple agents.
+
+---
+
+### MCP (Model Context Protocol)
+
+[Model Context Protocol](https://modelcontextprotocol.io/?utm_source=chatgpt.com) provides a standard way for AI agents to access external tools, databases, and services.
+
+---
+
+## Example: Construction Site Management Agent
+
+```text
+Site Engineer uploads DSR
+          |
+          v
+Monitoring Agent
+          |
+          v
+Delay Found?
+    /        \
+  Yes        No
+   |          |
+   v          v
+Planning     Store
+Agent        Report
+   |
+   v
+Recovery Plan
+   |
+   v
+Management Dashboard
+```
+
+Instead of managers manually reviewing reports, agents can analyze and escalate issues automatically.
+
+---
+
+## Career Opportunities
+
+Roles related to Agentic AI include:
+
+* GenAI Engineer
+* AI Agent Developer
+* AI Solutions Architect
+* LLM Engineer
+* AI Automation Engineer
+* RAG Engineer
+* MCP Integration Engineer
+* AI Product Engineer
+
+---
+
+## Learning Path (Recommended)
+
+1. Python Fundamentals
+2. APIs and JSON
+3. Prompt Engineering
+4. LLM Concepts
+5. RAG (Retrieval-Augmented Generation)
+6. Function Calling / Tools
+7. OpenAI Agents SDK
+8. CrewAI
+9. LangGraph
+10. MCP
+11. Multi-Agent Systems
+12. Production Deployment
+
+
+Python
+   ↓
+OpenAI SDK
+   ↓
+OpenAI Agents SDK
+   ↓
+MCP
+   ↓
+LangGraph
+   ↓
+CrewAI
+   ↓
+Build AI-powered ERP Applications
+```
+
+This combination can help you build next-generation ERP platforms where AI agents assist with project tracking, procurement, reporting, approvals, and operational workflows.
+
+
+
+
+
+
+New to Notebooks like this one? Head over to the guides folder!
+Just to check you've already added the Python and Jupyter extensions to Cursor, if not already installed:
+
+Open extensions (View >> extensions)
+Search for python, and when the results show, click on the ms-python one, and Install it if not already installed
+Search for jupyter, and when the results show, click on the Microsoft one, and Install it if not already installed
+Then View >> Explorer to bring back the File Explorer.
+And then:
+
+Click where it says "Select Kernel" near the top right, and select the option called .venv (Python 3.12.9) or similar, which should be the first choice or the most prominent choice. You may need to choose "Python Environments" first.
+Click in each "cell" below, starting with the cell immediately below this text, and press Shift+Enter to run
+Enjoy!
+After you click "Select Kernel", if there is no option like .venv (Python 3.12.9) then please do the following:
+
+On Mac: From the Cursor menu, choose Settings >> VS Code Settings (NOTE: be sure to select VSCode Settings not Cursor Settings);
+On Windows PC: From the File menu, choose Preferences >> VS Code Settings(NOTE: be sure to select VSCode Settings not Cursor Settings)
+In the Settings search bar, type "venv"
+In the field "Path to folder with a list of Virtual Environments" put the path to the project root, like C:\Users\username\projects\agents (on a Windows PC) or /Users/username/projects/agents (on Mac or Linux).
+And then try again.
+Having problems with missing Python versions in that list? Have you ever used Anaconda before? It might be interferring. Quit Cursor, bring up a new command line, and make sure that your Anaconda environment is deactivated:
+conda deactivate
+And if you still have any problems with conda and python versions, it's possible that you will need to run this too:
+conda config --set auto_activate_base false
+and then from within the Agents directory, you should be able to run uv python list and see the Python 3.12 version.
+
+# First let's do an import. If you get an Import Error, double check that your Kernel is correct..
+
+from dotenv import load_dotenv
+# Next it's time to load the API keys into environment variables
+# If this returns false, see the next cell!
+
+load_dotenv(override=True)
+
+
+# Check the key - if you're not using OpenAI, check whichever key you're using! Ollama doesn't need a key.
+
+import os
+openai_api_key = os.getenv('OPENAI_API_KEY')
+
+if openai_api_key:
+    print(f"OpenAI API Key exists and begins {openai_api_key[:8]}")
+else:
+    print("OpenAI API Key not set - please head to the troubleshooting guide in the setup folder")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
