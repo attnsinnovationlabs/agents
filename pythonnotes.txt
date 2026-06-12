@@ -1,0 +1,689 @@
+
+
+# 1. Variables
+
+Variables store data.
+
+```python
+name = "Tilak"
+age = 30
+salary = 50000.50
+is_active = True
+```
+
+### Real-Time Example
+
+```python
+customer_name = "John"
+order_amount = 1500
+```
+
+---
+
+# 2. Data Types
+
+| Type  | Example          |
+| ----- | ---------------- |
+| int   | 10               |
+| float | 10.5             |
+| str   | "Python"         |
+| bool  | True             |
+| list  | [1,2,3]          |
+| tuple | (1,2,3)          |
+| set   | {1,2,3}          |
+| dict  | {"name":"Tilak"} |
+
+---
+
+# 3. Strings
+
+Strings are collections of characters.
+
+```python
+name = "Agentic AI"
+```
+
+## Important String Methods
+
+### Upper
+
+```python
+name.upper()
+```
+
+Output:
+
+```python
+AGENTIC AI
+```
+
+### Lower
+
+```python
+name.lower()
+```
+
+### Capitalize
+
+```python
+name.capitalize()
+```
+
+### Replace
+
+```python
+name.replace("AI","Python")
+```
+
+### Split
+
+```python
+data = "Python,AI,ML"
+
+print(data.split(","))
+```
+
+Output:
+
+```python
+['Python', 'AI', 'ML']
+```
+
+### Find
+
+```python
+name.find("AI")
+```
+
+### Count
+
+```python
+name.count("A")
+```
+
+### Startswith
+
+```python
+name.startswith("Agent")
+```
+
+### Endswith
+
+```python
+name.endswith("AI")
+```
+
+### Strip
+
+```python
+text = " Python "
+
+print(text.strip())
+```
+
+---
+
+## Real-Time Example
+
+Email Validation
+
+```python
+email = "test@gmail.com"
+
+if email.endswith("@gmail.com"):
+    print("Valid Gmail")
+```
+
+---
+
+# 4. Lists
+
+Ordered and Mutable.
+
+```python
+fruits = ["Apple","Banana","Mango"]
+```
+
+## List Methods
+
+### Append
+
+```python
+fruits.append("Orange")
+```
+
+### Insert
+
+```python
+fruits.insert(1,"Grapes")
+```
+
+### Remove
+
+```python
+fruits.remove("Banana")
+```
+
+### Pop
+
+```python
+fruits.pop()
+```
+
+### Sort
+
+```python
+numbers = [5,3,1,2]
+
+numbers.sort()
+```
+
+### Reverse
+
+```python
+numbers.reverse()
+```
+
+### Count
+
+```python
+numbers.count(2)
+```
+
+### Index
+
+```python
+numbers.index(3)
+```
+
+---
+
+## Real-Time Example
+
+Shopping Cart
+
+```python
+cart = []
+
+cart.append("Laptop")
+cart.append("Mouse")
+cart.append("Keyboard")
+
+print(cart)
+```
+
+---
+
+# 5. Tuples
+
+Immutable collection.
+
+```python
+colors = ("Red","Green","Blue")
+```
+
+Cannot modify.
+
+```python
+colors[0] = "Black"
+```
+
+Error.
+
+---
+
+## Real-Time Example
+
+Coordinates
+
+```python
+location = (17.3850,78.4867)
+```
+
+---
+
+# 6. Sets
+
+Unique values only.
+
+```python
+numbers = {1,2,3,4}
+```
+
+## Methods
+
+### Add
+
+```python
+numbers.add(5)
+```
+
+### Remove
+
+```python
+numbers.remove(2)
+```
+
+### Union
+
+```python
+a = {1,2}
+b = {3,4}
+
+print(a.union(b))
+```
+
+### Intersection
+
+```python
+a.intersection(b)
+```
+
+---
+
+## Real-Time Example
+
+Unique Visitors
+
+```python
+users = {"user1","user2","user1"}
+
+print(users)
+```
+
+Output
+
+```python
+{'user1','user2'}
+```
+
+---
+
+# 7. Dictionary
+
+Key-Value pairs.
+
+```python
+employee = {
+    "name":"Tilak",
+    "role":"Developer"
+}
+```
+
+## Methods
+
+### Get
+
+```python
+employee.get("name")
+```
+
+### Keys
+
+```python
+employee.keys()
+```
+
+### Values
+
+```python
+employee.values()
+```
+
+### Items
+
+```python
+employee.items()
+```
+
+### Update
+
+```python
+employee.update({"salary":50000})
+```
+
+### Pop
+
+```python
+employee.pop("role")
+```
+
+---
+
+## Real-Time Example
+
+User Profile
+
+```python
+user = {
+    "name":"John",
+    "email":"john@gmail.com",
+    "phone":"9999999999"
+}
+```
+
+---
+
+# 8. Conditional Statements
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+else:
+    print("Not Eligible")
+```
+
+---
+
+## Real-Time Example
+
+Login
+
+```python
+password = "admin123"
+
+if password == "admin123":
+    print("Login Success")
+```
+
+---
+
+# 9. Loops
+
+## For Loop
+
+```python
+for i in range(5):
+    print(i)
+```
+
+## While Loop
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+---
+
+## Real-Time Example
+
+Display Orders
+
+```python
+orders = [101,102,103]
+
+for order in orders:
+    print(order)
+```
+
+---
+
+# 10. Functions
+
+```python
+def greet(name):
+    return f"Hello {name}"
+
+print(greet("Tilak"))
+```
+
+---
+
+## Real-Time Example
+
+Calculate GST
+
+```python
+def calculate_gst(amount):
+    return amount * 0.18
+```
+
+---
+
+# 11. Lambda Function
+
+```python
+square = lambda x:x*x
+
+print(square(5))
+```
+
+Output
+
+```python
+25
+```
+
+---
+
+# 12. Exception Handling
+
+```python
+try:
+    result = 10/0
+except ZeroDivisionError:
+    print("Cannot divide")
+```
+
+---
+
+## Real-Time Example
+
+ATM Withdrawal
+
+```python
+try:
+    amount = int(input())
+except ValueError:
+    print("Invalid Amount")
+```
+
+---
+
+# 13. File Handling
+
+## Write
+
+```python
+with open("data.txt","w") as file:
+    file.write("Python")
+```
+
+## Read
+
+```python
+with open("data.txt","r") as file:
+    print(file.read())
+```
+
+---
+
+# 14. OOP (Object Oriented Programming)
+
+Four Pillars:
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+---
+
+# Class and Object
+
+```python
+class Employee:
+
+    def __init__(self,name,salary):
+        self.name = name
+        self.salary = salary
+
+    def display(self):
+        print(self.name,self.salary)
+
+emp = Employee("Tilak",50000)
+
+emp.display()
+```
+
+---
+
+# Encapsulation
+
+Hide Data
+
+```python
+class Bank:
+
+    def __init__(self):
+        self.__balance = 1000
+
+    def get_balance(self):
+        return self.__balance
+
+obj = Bank()
+
+print(obj.get_balance())
+```
+
+---
+
+## Real-Time Example
+
+Bank Account
+
+Balance cannot be accessed directly.
+
+---
+
+# Inheritance
+
+Reuse parent class.
+
+```python
+class Person:
+
+    def display(self):
+        print("Person")
+
+class Employee(Person):
+    pass
+
+emp = Employee()
+
+emp.display()
+```
+
+---
+
+## Real-Time Example
+
+```text
+Person
+   |
+Employee
+   |
+Manager
+```
+
+---
+
+# Polymorphism
+
+Same method different behavior.
+
+```python
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+```
+
+---
+
+## Real-Time Example
+
+Payment Gateway
+
+```python
+class CreditCard:
+    def pay(self):
+        print("Credit Card")
+
+class UPI:
+    def pay(self):
+        print("UPI")
+```
+
+---
+
+# Abstraction
+
+Hide implementation.
+
+```python
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start(self):
+        pass
+
+class Car(Vehicle):
+
+    def start(self):
+        print("Car Started")
+```
+
+---
+
+# Constructor
+
+```python
+class Student:
+
+    def __init__(self,name):
+        self.name = name
+```
+
+---
+
+# Static Method
+
+```python
+class Math:
+
+    @staticmethod
+    def add(a,b):
+        return a+b
+```
+
+---
+
+# Class Method
+
+```python
+class Company:
+
+    company_name = "ATTNS"
+
+    @classmethod
+    def change_name(cls,name):
+        cls.company_name = name
+```
+
+---
+
+
+
+---
